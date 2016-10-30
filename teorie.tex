@@ -14,10 +14,10 @@ Použitý vzorek je tvaru hranolu s rozměry $t$, $d$ a $l$ a je opatřený šes
 \end{figure}
 
 Měrnou vodivost vzorku určíme z naměřené voltampérové charakteristiky.
-Vzorek zapojíme jako na obrázku \ref{obr:schemaodpor} a naměříme závislost $I_{12}$ na $U_{56}$.
+Vzorek zapojíme jako na obrázku \ref{obr:schemaodpor} a naměříme závislost $I_{12}$ na $U_{34}$.
 Měrnou vodivost určíme z fitu
 \begin{equation}
-I_{12}=\sigma \frac{td}{l} U_{56} \,.
+I_{12}=\sigma \frac{td}{l} U_{34} \,.
 \end{equation}
 
 \begin{figure}[htbp]
@@ -37,18 +37,18 @@ U_H=R_H\frac{I_{12} \cdot B}{t} \,.
 Vzhledem k tomu, že kontakty 5 a 6 nejsou s velkou pravděpodobností umístěny přesně symetricky, naměříme na nich při průchodu proudu vzorkem nenulové napětí i při nulové magnetické indukci.
 Abychom tento jev eliminovali, změříme napětí při obou polaritách magnetického pole a správnou hodnotu $U_H$ určíme jako
 \begin{equation}
-| U_H |=|U_{56}^+ - U_{56}^+|/2 \,.
+| U_H |=|U_{56}^+ - U_{56}^-|/2 \,.
 \end{equation}
 
 Mezi $R_H$ a koncentrací $n$ platí vztah \cite{skripta}
-\begin{equation}
+\begin{equation} \label{eq:koncentrace}
 R_H = \frac{r_H}{en} \,,
 \end{equation}
 kde $e$ je náboj elektronu a $r_H$ je tzv. rozptylový faktor.
-V našem případě můžeme uvažovat $r_H = 3\pi/8$.
+V našem případě můžeme uvažovat $r_H = 3\pi/8$. \cite{skripta}
 
 Ze známé $R_H$ a $\sigma$ můžeme vypočítat tzv. Hallovskou pohyblivost ze vztahu \cite{skripta}
-\begin{equation}
+\begin{equation} \label{eq:pohyblivost}
 \mu = R_H \sigma \,.
 \end{equation}
 

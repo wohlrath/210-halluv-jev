@@ -2,21 +2,31 @@
 Měření proběhlo při normálním tlaku a pokojové teplotě (přibližně \SI{22}{\degreeCelsius}).
 Všechny uvedené nejistoty jsou standardní a v zápisu \num{10(1)} znamená číslo v závorce nejistotu v řádu poslední uvedené číslice.
 
+Proud $I_{12}$ jsme měřili digitálním multimetrem MASTECH MY-68 a napětí $U_{34}$ a $U_{56}$ digitálním multimetrem METEX MXD 4660A.
+Proud $I_M$ procházející elektromagnetem jsme měřili analogovým ampérmetrem s třídou přesnosti \num{0.5} a rozsahem \SI{6}{\volt}.
+
 Rozměry vzorku byly $l=\SI{6.000(5)}{\mm}$, $d=\SI{3.350(5)}{\mm}$ a $t=\SI{0.720(5)}{\mm}$.
 
 
-
-
-Měrnou vodivost vzorku jsme určili $\sigma = \SI{5.28(5)}{\siemens}$.
+Měrnou vodivost vzorku jsme určili $\sigma = \SI{5.28(5)}{\siemens\per\meter}$.
 Naměřená voltampérová charakteristika je uvedena v tabulce \ref{t:vodivost} a zanesena do grafu \ref{g:vodivost}.
+
 
 
 \begin{tabulka}[htbp]
 \centering
-\begin{tabular}{|cccc|}
-\hline 
-1 & 2 & 3 & 4 \\
-\hline
+\begin{tabular}{c|c}
+$U_{34}$ (\si{\volt}) & $I_{12}$ (\si{\milli\ampere}) \\ \hline
+\num{0.232(2)} & \num{0.50(4)} \\
+\num{0.474(2)} & \num{1.00(5)} \\
+\num{0.712(2)} & \num{1.50(5)} \\
+\num{0.946(3)} & \num{2.00(6)} \\
+\num{1.183(3)} & \num{2.50(7)} \\
+\num{1.423(3)} & \num{3.00(7)} \\
+\num{1.651(3)} & \num{3.50(8)} \\
+\num{1.885(3)} & \num{4.00(8)} \\
+\num{2.11(2)} & \num{4.50(9)} \\
+\num{2.34(2)} & \num{5.00(9)} \\
 \end{tabular}
 \caption{Voltampérová chrakteristika vzorku}
 \label{t:vodivost}
@@ -28,3 +38,40 @@ Naměřená voltampérová charakteristika je uvedena v tabulce \ref{t:vodivost}
 \caption{Voltampérová charakteristika vzorku}
 \label{g:vodivost}
 \end{graph}
+
+Magnetické pole buzené elektromagnetem mělo indukci
+\begin{equation}
+B(T)=\num{0.098} \cdot I_M(A)
+\end{equation}
+
+Změřili jsme Hallovu konstantu $R_H = \SI{0.061(1)}{\meter\cubed\per\ampere\per\second}$. Naměřené hodnoty jsou uvedeny v tabulce \ref{t:hall} a zaneseny do grafu \ref{g:hall}.
+Hodnoty $U_{56}^+$, $U_{56}^-$ neuvádíme, pouze $U_H$, stejně tak místo $I_M$ uvádíme pouze $B$, tyto hodnoty jsou k nahlédnutí v záznamu z měření.
+
+
+\begin{tabulka}[htbp]
+\centering
+\begin{tabular}{c|c||c|c}
+\multicolumn{2}{c||}{$I_{12}=\SI{2.50(6)}{\milli\ampere}$}  &  \multicolumn{2}{c}{$I_{12} = \SI{5.00(9)}{\milli\ampere}$} \\
+$B (\si{\tesla})$ & $U_H (\si{\milli\volt})$ & $B (\si{\tesla})$ & $U_H (\si{\milli\volt})$ \\ \hline
+\num{0.049(3)} & \num{12(2)} & \num{0.049(3)} & \num{20(2)} \\
+\num{0.098(3)} & \num{23(2)} & \num{0.098(3)} & \num{42(2)} \\
+\num{0.147(3)} & \num{33(2)} & \num{0.147(3)} & \num{63(2)} \\
+\num{0.196(3)} & \num{45(2)} & \num{0.196(3)} & \num{83(2)} \\
+\num{0.245(3)} & \num{55(2)} & \num{0.245(3)} & \num{103(2)} \\
+\num{0.294(3)} & \num{66(2)} & \num{0.294(3)} & \num{124(2)} \\
+\num{0.343(3)} & \num{76(2)} & \num{0.343(3)} & \num{145(2)} \\
+\num{0.392(3)} & \num{86(2)} & \num{0.392(3)} & \num{163(2)} \\
+\end{tabular}
+\caption{Měření Hallovy konstanty}
+\label{t:hall}
+\end{tabulka}
+
+\begin{graph}[htbp]
+\centering
+\input{hall.tex}
+\caption{Měření Hallovy konstanty}
+\label{g:hall}
+\end{graph}
+
+
+Podle \eqref{eq:pohyblivost} jsme vypočítali Hallovskou pohyblivost $\mu = \SI{0.324(3)}{\ampere\metre\squared\per\kg}$ a podle \eqref{eq:koncentrace} koncentraci nositelů náboje $n = \num{1.07(1)} \cdot \SI{e20}{\per\metre\cubed}$.

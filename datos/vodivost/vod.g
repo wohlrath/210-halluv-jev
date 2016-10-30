@@ -4,7 +4,7 @@ set terminal epslatex size 18cm,12cm
 set output 'vod.tex'
 
 set title
-set xlabel '$U_{56}$ (\si{\volt})'
+set xlabel '$U_{34}$ (\si{\volt})'
 set ylabel '$I_{12}$ (\si{\milli\ampere})'
 set grid x,y
 set yrange[0:6]
